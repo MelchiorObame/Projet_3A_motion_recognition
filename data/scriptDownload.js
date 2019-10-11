@@ -8,9 +8,10 @@ function main(){
     if (rows[i].hasAttribute("href")) 
     {
         link = rows[i].getAttribute("href");
-        console.log("href  =>"+link);
+        
         if (link.match(/(bvh)$/)) {
-            rows[i].setAttribute('dowload', link);
+          console.log("href  =>"+link);
+            rows[i].setAttribute("dowload", "");
             rows[i].click();
             downloads.push(link);
             
