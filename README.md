@@ -8,9 +8,9 @@ Apprentissage automatique pour la reconnaissance d’émotion/de style à partir
           
 Emotional Body Motion Database : [Téléchargement](https://1drv.ms/u/s!Apv4Ke1FYz8zgQUBfj2P2jsgOC3z?e=klDEYn) ou [site web](http://ebmdb.tuebingen.mpg.de)     
 Vous pouvez utiliser le logiciel [blender](https://www.blender.org) pour visualiser les données .bvh      
-Pour importer le contenu d'un fichier BVH dans Blender, cliquer sur File,  puis sur Import, puis sur Motion Capture (bvh).      
-![blenderCapture](http://ekladata.com/BKdqaxtZPpGUTAIPuSnSrxOSbsI@250x322.jpg)       
-<img alt="blender" src="" />                                        
+Pour importer le contenu d'un fichier BVH dans Blender, cliquer sur File,  puis sur Import, puis sur Motion Capture (bvh).                 
+<img alt="blenderCapture" src="http://ekladata.com/BKdqaxtZPpGUTAIPuSnSrxOSbsI@250x322.jpg" />               
+
 #### Explication des fichiers .bvh (motion capture)       
              
 La section ROOT spécifie l'emplacement de l'articulation des hanches dans un espace tridimensionnel. Sous la section ROOT de la structure se trouvent des sections JOINT, chacune contenant des informations spécifiant l'emplacement de l'articulation squelettique par rapport à son articulation parent. Les spécifications de localisation relatives pour une articulation parentale et son articulation enfant permettent de déterminer la longueur de l'os osseux entre les deux articulations. Lorsqu'une articulation n'a pas d'articulation enfant, elle est liée à une section End Site.       
