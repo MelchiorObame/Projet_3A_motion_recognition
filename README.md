@@ -7,7 +7,9 @@ Apprentissage automatique pour la reconnaissance d’émotion/de style à partir
 <img alt="sample3" src="https://i.imgur.com/UvBM1gv.gif" />           
           
 Emotional Body Motion Database : [Téléchargement](https://1drv.ms/u/s!Apv4Ke1FYz8zgQUBfj2P2jsgOC3z?e=klDEYn) ou [site web](http://ebmdb.tuebingen.mpg.de)     
-Vous pouvez utiliser le logiciel [blender](https://www.blender.org) pour visualiser les données .bvh         
+Vous pouvez utiliser le logiciel [blender](https://www.blender.org) pour visualiser les données .bvh      
+Pour importer le contenu d'un fichier BVH dans Blender, cliquer sur File,  puis sur Import, puis sur Motion Capture (bvh).      
+![blenderCapture](http://ekladata.com/BKdqaxtZPpGUTAIPuSnSrxOSbsI@250x322.jpg)       
 <img alt="blender" src="" />                                        
 #### Explication des fichiers .bvh (motion capture)       
              
