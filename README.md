@@ -4,8 +4,9 @@ Apprentissage automatique pour la reconnaissance d’émotion/de style à partir
 #### Les différentes types de data            
 <img alt="sample1" src="https://i.imgur.com/QxML83b.gif" /><img alt="sample2" src="https://i.imgur.com/vfge7DS.gif" />
 
-<img alt="sample3" src="https://i.imgur.com/UvBM1gv.gif" />           
-          
+<img alt="sample3" src="https://i.imgur.com/UvBM1gv.gif" />     
+
+On décide de travailler dans un premier temps avec les fichiers "20 points joint" de type .bvh                  
 Emotional Body Motion Database : [Téléchargement](https://1drv.ms/u/s!Apv4Ke1FYz8zgQUBfj2P2jsgOC3z?e=klDEYn) ou [site web](http://ebmdb.tuebingen.mpg.de)     
 Vous pouvez utiliser le logiciel [blender](https://www.blender.org) pour visualiser les données .bvh      
 Pour importer le contenu d'un fichier BVH dans Blender, cliquer sur File,  puis sur Import, puis sur Motion Capture (bvh).                 
