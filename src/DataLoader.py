@@ -11,6 +11,7 @@ class DirPaths:
     action='../data/MSRAction3D/'
     dance="../data/DanceDB/"
     emotional="../data/EmotionalBody/"
+    CSVdir='../data/csv/'
 
 class ActionCSV:
     fileName="Action3dData.csv"
@@ -47,8 +48,11 @@ class DataLoader:
             self.arrayData = numpy.delete(self.arrayData, (0), axis=0)
             
             if(self.withCSV):
+                if not os.path.exists(DirPaths.CSVdir):
+                    os.mkdir(DirPaths.CSVdir)
+                    
                 print("creating "+ActionCSV.fileName+" ...")
-                fichierCSV = open(ActionCSV.fileName, "w")
+                fichierCSV = open(os.path.join(DirPaths.CSVdir,ActionCSV.fileName), "w")
                 headerLine = ";".join(ActionCSV.header) + "\n"
                 fichierCSV.write(headerLine)
                 for line in self.arrayData:
