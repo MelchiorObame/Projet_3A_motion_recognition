@@ -32,10 +32,10 @@ class DataLoader:
             self.filePath= DirPaths.action
             self.arrayData = numpy.empty(shape=[1, len(ActionCSV.header)])
             assert self.filePath[-1]=='/'
-            
+            n=1
             for action in glob.glob(self.filePath+'*.txt'):
                 fileNameSplit = os.path.basename(action).strip().split('.')[0].split('_')[:3]    #['a01', 's01', 'e01']
-                print(os.path.basename(action))
+                print(os.path.basename(action)+'   '+str(n)+'/567')
                 with open(action,'r', encoding='utf-8') as file:
                     line = file.readline()
                     time=0
@@ -45,12 +45,12 @@ class DataLoader:
                             self.arrayData = numpy.append(self.arrayData, [[time, lineSplit[0], lineSplit[1], lineSplit[2],i,fileNameSplit[0], fileNameSplit[1],fileNameSplit[2]]], axis=0)
                             line = file.readline()
                         time+=1
+                n+=1
             self.arrayData = numpy.delete(self.arrayData, (0), axis=0)
             
             if(self.withCSV):
                 if not os.path.exists(DirPaths.CSVdir):
                     os.mkdir(DirPaths.CSVdir)
-                    
                 print("creating "+ActionCSV.fileName+" ...")
                 fichierCSV = open(os.path.join(DirPaths.CSVdir,ActionCSV.fileName), "w")
                 headerLine = ";".join(ActionCSV.header) + "\n"
