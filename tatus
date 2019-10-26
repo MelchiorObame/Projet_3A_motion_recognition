@@ -1,0 +1,213 @@
+[33mcommit 0ad5550d0c14c891b4d608715ae73021572a7a5f[m[33m ([m[1;36mHEAD -> [m[1;32mMelchior[m[33m, [m[1;31morigin/Melchior[m[33m)[m
+Author: Melchior Obame <obamemelchior@gmail.com>
+Date:   Fri Oct 25 22:00:10 2019 +0200
+
+    RAS
+
+[33mcommit 4461075c1f709a4c24956eaa6ad317adf9091758[m
+Author: Melchior Obame <obamemelchior@gmail.com>
+Date:   Fri Oct 25 21:27:21 2019 +0200
+
+    RAS
+
+[33mcommit f25f62d52197f71f36b0444070aa375242bf6db6[m
+Author: Melchior Obame <obamemelchior@gmail.com>
+Date:   Fri Oct 25 21:06:29 2019 +0200
+
+    DataLoader
+    
+    renommage en DataLoader
+    +traitement du CSV
+
+[33mcommit c514a66309b437b2208633e461256235d885b6b6[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: MelchiorObame <40194959+MelchiorObame@users.noreply.github.com>
+Date:   Fri Oct 25 14:20:05 2019 +0200
+
+    Set theme jekyll-theme-time-machine
+
+[33mcommit 50c588817e3bad40e976907f3518d35ec2b55891[m
+Author: MelchiorObame <40194959+MelchiorObame@users.noreply.github.com>
+Date:   Fri Oct 25 14:19:37 2019 +0200
+
+    Set theme jekyll-theme-cayman
+
+[33mcommit 2f445c667e5c135ba65ee398095730655b837bee[m
+Author: Melchior Obame <obamemelchior@gmail.com>
+Date:   Fri Oct 25 14:14:54 2019 +0200
+
+    architecture
+    
+    RAS
+
+[33mcommit 2842b762d0ed51c8191ce5aadfc6680507a80c70[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Fri Oct 18 21:55:31 2019 +0200
+
+    Update .gitignore
+
+[33mcommit 3b4bda7c68bc6711829973ec8240875e1cd1e09a[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Fri Oct 18 19:26:13 2019 +0200
+
+    Create .gitignore
+
+[33mcommit 33467bf7dca1d7343c869b9973070c3810166f15[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Fri Oct 18 19:09:04 2019 +0200
+
+    suppression
+
+[33mcommit e6b396692d4a7ec94965307ee2ecc16b2ad70596[m
+Merge: 1324f8e 33ff180
+Author: Saad BEN <saad.benda@gmail.com>
+Date:   Fri Oct 11 19:39:21 2019 +0200
+
+    Merge pull request #6 from MelchiorObame/saadbenda
+    
+    Delete README2.md
+
+[33mcommit 33ff180e21beb865811ede39a05f7f8b272a351a[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Fri Oct 11 19:35:35 2019 +0200
+
+    Delete README2.md
+
+[33mcommit 1324f8ed8096155d8f31ce3ba173c9c33a7861ae[m
+Merge: 8167530 4c74b46
+Author: Saad BEN <saad.benda@gmail.com>
+Date:   Fri Oct 11 19:34:33 2019 +0200
+
+    Merge pull request #5 from MelchiorObame/saadbenda
+    
+    changes
+
+[33mcommit 4c74b4680ea5343588df4258e939ae3398d65a71[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Fri Oct 11 19:34:11 2019 +0200
+
+    changes
+
+[33mcommit 8167530314f4a07be70c58dce00463496dc992c7[m
+Merge: d93cf40 acae5cb
+Author: Saad BEN <saad.benda@gmail.com>
+Date:   Fri Oct 11 19:32:55 2019 +0200
+
+    Merge pull request #4 from MelchiorObame/saadbenda
+    
+    Saadbenda
+
+[33mcommit acae5cb9a743f3187c270ede32df6a4d49f07ae2[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Fri Oct 11 19:32:30 2019 +0200
+
+    changes
+
+[33mcommit a6a98ce884fa048a4427e751960a51a9e7a2607d[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Fri Oct 11 19:29:43 2019 +0200
+
+    Create README2.md
+
+[33mcommit d93cf408d837cf737d44752c85b177ff6b6d6122[m
+Merge: ef846e1 5aabdcf
+Author: Saad BEN <saad.benda@gmail.com>
+Date:   Fri Oct 11 19:27:32 2019 +0200
+
+    Merge pull request #3 from MelchiorObame/saadbenda
+    
+    Saadbenda
+
+[33mcommit 5aabdcfcdd3e4853f15a8031fdbc3c8c9833cdf7[m
+Merge: 1adb610 ef846e1
+Author: Saad BEN <saad.benda@gmail.com>
+Date:   Fri Oct 11 19:27:14 2019 +0200
+
+    Merge branch 'master' into saadbenda
+
+[33mcommit 1adb610c4158030adf4ca29fe1d748a98570ba6b[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Fri Oct 11 17:41:09 2019 +0200
+
+    changes
+
+[33mcommit a04bcd960b47959207af165915dfd119182a4660[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Fri Oct 11 15:36:07 2019 +0200
+
+    changes
+
+[33mcommit 0602c450f04fd057b05358ad9ce97f5106266c27[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Fri Oct 11 14:20:17 2019 +0200
+
+    changes database
+
+[33mcommit d33217019ba537e8c425612a3751488554825ed9[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Fri Oct 11 13:56:00 2019 +0200
+
+    add data base
+
+[33mcommit 49ebb35b036b3a5d9803c694b82e7b535da897c9[m
+Author: Saad BEN <saad.benda@gmail.com>
+Date:   Fri Oct 11 01:03:59 2019 +0200
+
+    Update README.md
+
+[33mcommit bac53e931f6ae7024c445759f71080c95ff3275a[m
+Merge: 8c13865 30ef2df
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Fri Oct 11 01:03:18 2019 +0200
+
+    Merge branch 'saadbenda' of https://github.com/MelchiorObame/Projet_3A_motion_recognition into saadbenda
+
+[33mcommit 8c13865ae734f355b73c0865b021326e8e98c267[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Fri Oct 11 01:03:13 2019 +0200
+
+    script to download
+
+[33mcommit 30ef2df8c59df475fb9666c60b42dfa8219333f9[m
+Author: Saad BEN <saad.benda@gmail.com>
+Date:   Thu Oct 10 22:36:13 2019 +0200
+
+    Update README.md
+
+[33mcommit 306c43071f784399465a5eb3de59e7f307639d10[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Thu Oct 10 22:35:19 2019 +0200
+
+    Create wallpaper.png
+
+[33mcommit ef846e1c3a2e70467b752afd688908c50c3a16d3[m
+Author: Saad BEN <saad.benda@gmail.com>
+Date:   Thu Oct 10 22:34:33 2019 +0200
+
+    Update README.md
+
+[33mcommit 45a21170771686184f0a6a1b2ba2631b45d7688d[m
+Author: Saad BEN <saad.benda@gmail.com>
+Date:   Thu Oct 10 22:27:22 2019 +0200
+
+    Update README.md
+
+[33mcommit 0d5a1f44f88e170909e1bbdba4e8e925544dcc03[m
+Merge: 78022c8 04249ab
+Author: Saad BEN <saad.benda@gmail.com>
+Date:   Sat Sep 28 16:28:26 2019 +0200
+
+    Merge pull request #2 from MelchiorObame/saadbenda
+    
+    Create script.py
+
+[33mcommit 04249ab747eb3d1cc73285b893eb33b3503ead71[m
+Author: saadbenda <saad.benda@gmail.com>
+Date:   Sat Sep 28 16:20:06 2019 +0200
+
+    Create script.py
+
+[33mcommit 78022c89ae3373afa956aa4e395e46e17317a4e9[m
+Author: MelchiorObame <40194959+MelchiorObame@users.noreply.github.com>
+Date:   Thu Sep 26 08:21:50 2019 +0000
+
+    Initial commit
