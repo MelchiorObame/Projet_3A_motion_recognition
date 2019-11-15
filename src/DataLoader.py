@@ -2,6 +2,7 @@ import os
 import glob
 import numpy
 
+
 class DataName:
     action="MSR Action3D"
     dance="Dance"
@@ -15,12 +16,13 @@ class DirPaths:
 
 class ActionCSV:
     fileName="Action3dData.csv"
-    header= ['time','x','y','z','joint','action','subject','essai']
-    sep=';'
+    header= ['time','x','y','z','confidence','joint','action','subject','essai']
+    sep=','
 
 class DataLoader:
     "loads data"
     
+    ## fixer la taille de la dataArray finale , pour chaque fichier , calcler au prealable la taille et enfin fusionner avec le grand Array
     def __init__(self, DBName,isCSV=False):
         self.filePath='/'
         self.arrayData=[]
@@ -33,16 +35,17 @@ class DataLoader:
             self.arrayData = numpy.empty(shape=[1, len(ActionCSV.header)])
             assert self.filePath[-1]=='/'
             n=1
-            for action in glob.glob(self.filePath+'*.txt'):
+            FilesTXT=glob.glob(self.filePath+'*.txt')
+            for action in FilesTXT:
                 fileNameSplit = os.path.basename(action).strip().split('.')[0].split('_')[:3]    #['a01', 's01', 'e01']
-                print(os.path.basename(action)+'   '+str(n)+'/567')
+                print(os.path.basename(action)+'   '+str(n)+'/'+str(len(FilesTXT)))
                 with open(action,'r', encoding='utf-8') as file:
                     line = file.readline()
                     time=0
                     while line:
                         for i in range(1,21):                           
-                            lineSplit=line.strip().split('  ')
-                            self.arrayData = numpy.append(self.arrayData, [[time, lineSplit[0], lineSplit[1], lineSplit[2],i,fileNameSplit[0], fileNameSplit[1],fileNameSplit[2]]], axis=0)
+                            lineSplit=line.strip().split('  ')   #[1:].lstrip('0') pour tranformer 'a01' -> 1
+                            self.arrayData = numpy.append(self.arrayData, [[time, lineSplit[0], lineSplit[1], lineSplit[2],lineSplit[3],i,fileNameSplit[0][1:].lstrip('0'), fileNameSplit[1][1:].lstrip('0'),fileNameSplit[2][1:].lstrip('0')]], axis=0)
                             line = file.readline()
                         time+=1
                 n+=1
@@ -53,18 +56,17 @@ class DataLoader:
                     os.mkdir(DirPaths.CSVdir)
                 print("creating "+ActionCSV.fileName+" ...")
                 fichierCSV = open(os.path.join(DirPaths.CSVdir,ActionCSV.fileName), "w")
-                headerLine = ";".join(ActionCSV.header) + "\n"
+                headerLine = ActionCSV.sep.join(ActionCSV.header) + "\n"
                 fichierCSV.write(headerLine)
                 for line in self.arrayData:
-                     ligne = ";".join(line) + "\n"
+                     ligne = ActionCSV.sep.join(line) + "\n"
                      fichierCSV.write(ligne)
                 fichierCSV.close()
-
+                print("creation OK")
 
 
             
-            
-a=DataLoader("MSR Action3D", isCSV=True).arrayData
+#a=DataLoader("MSR Action3D", isCSV=True).arrayData
 
                
            
