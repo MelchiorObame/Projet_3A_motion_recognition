@@ -8,6 +8,7 @@ import math
 class Data:
     NJoints=20
     NcoordinatesOfJoint=4
+    Naction=567
     
 ##############################################        
 

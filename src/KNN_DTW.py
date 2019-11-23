@@ -27,6 +27,8 @@ class KnnDtw(object):
         self.n_neighbors=n_neighbors
         self.max_warping_window=max_warping_window
         
+    
+    
         
     def fit(self, x_train, y_train):
         """Fit the model with x_train and their labels y_train
@@ -97,47 +99,16 @@ class KnnDtw(object):
            ( 2) the Knn label count probability     
         """
         
-        dm = self._dist_matrix(self.x_train, x,THO, normalized, confidence )   #########
+        dm = self._dist_matrix(self.x_train, x,THO, normalized, confidence)
         # Identify the K nearest neighbors
         knn_idx = dm.argsort()[:self.n_neighbors]
-        print("index plus proches voisins "+str(knn_idx))
         # Identify the K nearest labels
         knn_labels = self.y_train[knn_idx]
         print("labels voisins :"+str(knn_labels))
         # Model label
         mode_data = mode(knn_labels, axis=0)
         mode_label = mode_data[0]
-        mode_proba = mode_data[1]/self.n_neighbors
-        return mode_label.ravel(), mode_proba.ravel()
-        
-        
-### test
-#a2=np.random.uniform(1,100,[6, 20, 4])
-#a1=np.random.uniform(1,100,[6, 20, 4])
-Naction=100
-NFrameDataSet =8
-NFrameU =8
-labelsMaxInt=4
-
-MinValue = 1
-MaxValue = 100
-
-training_DataSet= np.random.uniform(MinValue,MaxValue, [Naction,NFrameDataSet,20,4]) #(valeurs comprises entre 1 et 1000 ,[nAction, Nframe, 20, 40])
-model= KnnDtw(n_neighbors=10, max_warping_window= sys.maxsize)
-#print("distance entre 2 actions :"+str(model._dtw_distance(a1, a2,THO=5, normalized=True, confidence=True)))
-#dist_matrix = model._dist_matrix(training_DataSet,a2, THO=15, normalized=True, confidence=True)
-#print(dist_matrix)
-#for i in range(len(dist_matrix)):
-#    print("dist action "+str(i)+"---action U :"+str(dist_matrix[i]))   
-#_________
-labels = np.random.randint(1,labelsMaxInt,Naction)
-model.fit(training_DataSet, labels)
-
-u= np.random.uniform(MinValue,MaxValue,[NFrameU, 20, 4]) #an action
-label, proba = model.predict(u, THO=26, normalized=True, confidence=False)
-print("label = "+str(label)+", proba = "+str(proba))
-#labelX, probaX=mode(labels)
-#print("labelX "+str(labelX))
-
-#print("distance entre action ="+str(dist))
+        #mode_proba = mode_data[1]/self.n_neighbors
+        return mode_label.ravel()#, mode_proba.ravel()
+    
         
