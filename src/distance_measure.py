@@ -1,16 +1,24 @@
 import numpy as np
 import math
-    
-#à tester toutes ces fonctions
-#class Joint optionelle
+
 
 ########################### CLASSES ##########   
 class Data:
     NJoints=20
     NcoordinatesOfJoint=4
     Naction=567
+
+class DataDanceInfo:
+    NJoints=27
+    NcoordinatesOfJoint=3
+    Naction=134
     
-##############################################        
+class DataEmotionalInfo:
+    NJoints=28
+    NcoordinatesOfJoint=6
+    Naction=1447
+    
+############################# For MSR ACTION 3D        
 
 def euclid_distance_joints(j1, j2): #OK  en supposant que l'origine est la mm pour les 2
     """ euclidian distance between two vectors/joint 
@@ -28,8 +36,7 @@ def thresholdConfidence(confidence, tho): #OK
 def distance_frames(f1,f2,  tho,confidence=False):  #OK
     """ distance between Frames list of joints
     f1,f2 array of shape [NJoint=20,nCollumn=4]  matrix
-    J_prime : nombre de joints communs non nul dans les deux frames
-    """
+    J_prime : nombre de joints communs non nul dans les deux frames """
     frame1, frame2 =np.array(f1), np.array(f2)
     somme=0
     if not confidence:
@@ -50,19 +57,28 @@ def distance_frames(f1,f2,  tho,confidence=False):  #OK
         else:
             return somme/J_prime
         
-#########################  testing 
-        
-# #=============================================================================
-#j1= np.array([1,2,1,0])
-#j2= np.array([1,2,8,0])
-##print()
-#print("distance Euclid : "+str(euclid_distance_joints(j1,j2)))
-#print("confidence :"+str(thresholdConfidence(3,3))) 
-# 
-#frame1= np.random.rand(20,4)
-#frame2= np.random.rand(20,4)
-#
-#print("distance frames :"+str(distance_frames(frame1,frame2,0.2,confidence=True)))
-#
-##=============================================================================
-    
+
+def distance_framesWithRotationDance(f1, f2): #ok
+    """ distance between Frames list of joints
+    f1,f2 array of shape [NJoint=55,nCollumn = (NcoordinatesOfJoint=6)]  matrix """
+    frame1, frame2 =np.array(f1), np.array(f2)
+    sumDist=0
+    for j in range(DataDanceInfo.NJoints):
+        sumDist+= euclid_distance_joints(frame1[j],frame2[j])
+    return sumDist
+
+
+################## Emotional    
+def distanceJointWithRotationEmotional(j1,j2):#test 2
+    """ distance between two vectors/joint 
+        A joint has 6 cordinates J([x,y,z,RotY, RotX, RotZ), array [x,y,z,RotY, RotX, RotZ] pf shape [6] """
+    return euclid_distance_joints(j1[:3], j2[:3])
+
+def distance_framesWithRotationEmotional(f1, f2): #probleme  
+    """ distance between Frames list of joints
+    f1,f2 array of shape [NJoint=23,nCollumn= (NcoordinatesOfJoint=6)]  matrix """
+    frame1, frame2 =np.array(f1), np.array(f2)
+    sumDist=0
+    for j in range(DataEmotionalInfo.NJoints):
+        sumDist+=  euclid_distance_joints(frame1[j][:3],frame2[j][:3])
+    return sumDist
