@@ -11,7 +11,7 @@ import reshapeDataToMatrix
 
 #--------- encoding to RGB :
 
-def getPictureDataSet(dataName,minNFrames=30, labelTarget=None,normalizeData=False, size=(32,32)): #OK
+def getPictureDataSet(dataName,minNFrames=30, labelTarget=None,normalizeData=False, size=(70,70)): #OK
     """ creates resized pictures 
     Arguments : size = size of our output picture """
     #create picture folder if not exists
@@ -102,8 +102,8 @@ def normalizeDataRGB(dataName, action ,minX, maxX, minY, maxY,minZ, maxZ):
     return result.transpose(1,0,2)
 
 ### -------------- TEST : 1  : All tests work. 
-#getPictureDataSet(DataLoader.DataName.action,labelTarget='action',minNFrames=30) #ok
-#getPictureDataSet(DataLoader.DataName.dance,  labelTarget='subject',minNFrames=800) #ok
+#getPictureDataSet(DataLoader.DataName.action,labelTarget='subject',minNFrames=30) #ok
+getPictureDataSet(DataLoader.DataName.dance,  labelTarget='subject',minNFrames=800) #ok
 #getPictureDataSet(DataLoader.DataName.emotional,labelTarget='subject',minNFrames=600) #ok
 
 #--------- SPMF : Skeleton Pose-Motion Feature

@@ -251,10 +251,10 @@ def saveMatrixFile(dataName,labelstarget,target,labelsPredicted, loopNeighbors=F
 #print('executed in : '+str(end-begin))
 ###___________________
 ###### les labels sont OK pour emotional 
-#X_train, actionLabelsTrain, subjectLabelsTrain, X_test, actionLabelsTest, subjectLabelsTest = reshapeDataToMatrix.train_test_split(DataLoader.DataName.emotional, normalizeData=True, labelTarget='subject')
+#X_train, actionLabelsTrain, subjectLabelsTrain, X_test, actionLabelsTest, subjectLabelsTest = reshapeDataToMatrix.train_test_split(DataLoader.DataName.action, normalizeData=True, labelTarget='subject')
 #print(len(np.unique(subjectLabelsTest)) == len(DataLoader.EmotionalCSV.subjects.items()))
-
-
+#print( round(  len(X_train)*100 / (len(X_train)+len(X_test)),2)    )
+#print( round(  len(X_test)*100 / (len(X_train)+len(X_test)),2)    )
 
 ##_________________________________  K N N        
 ##========= Action 3D :  OK

@@ -20,7 +20,7 @@ import DataLoader,SPMF
 
 
 class DataInformation:
-    size=(42,42)
+    size=(32,32)
     img_width, img_height = size[0], size[1]
     batch_size = 32
     epochs = 60
@@ -40,7 +40,6 @@ class modelCNN:
             dirPath = DataLoader.DanceCSV.pictureDanceDBDirName
             if labelTarget.lower()=='subject':
                 savingWeight='DanceDB_subject'
-                #lr=0.003
                 self.Depth= 43
                 self.nb_dense_block =3
                 self.growth_rate =12
@@ -68,10 +67,6 @@ class modelCNN:
             else:
                 savingWeight='MSRAction3D_subject'
                 self.classes = [i for i in range(1,DataLoader.ActionCSV.NumberSubject+1)]
-                self.Depth=34            # Depth: int -- how many layers; "Depth must be 3*N + 4"
-                self.nb_dense_block =3   # nb_dense_block: int -- number of dense blocks to add to end
-                self.growth_rate =12     # growth_rate: int -- number of filters to add
-                self.nb_filter = 16      # nb_filter: int -- number of filters
 
         self.Depth= 43           # Depth: int -- how many layers; "Depth must be 3*N + 4"
         self.nb_dense_block = 4   # nb_dense_block: int -- number of dense blocks to add to end
@@ -263,8 +258,9 @@ class modelCNN:
             
         earlystopper = EarlyStopping(monitor='val_acc', patience=15, verbose=2)
         
-        reduce_lr = ReduceLROnPlateau(monitor='val_acc', factor=0.5, patience=4, 
-                                   verbose=2, mode='max', min_lr=0.00001)
+        #reduce_lr = ReduceLROnPlateau(monitor='val_acc', factor=0.5, patience=4, verbose=2, mode='max', min_lr=0.00001)
+        # learning schedule callback
+        reduce_lr = LearningRateScheduler(step_decay)
         
         # Save the best model during the traning
         checkpointer = ModelCheckpoint(savingWeihtFile,monitor='val_acc',
@@ -414,7 +410,7 @@ def plot_confusion_matrix(cm, classes,dataName,normalize=False,title='Confusion 
                      
     #en cours en ligne de commande : cnn = modelCNN(DataLoader.DataName.emotional, labelTarget="subject", network="densenet", pictureMode='RGB')
 ## ---------- TEST -------------
-#cnn = modelCNN(DataLoader.DataName.action, network="medium",labelTarget="action", pictureMode='RGB')
+cnn = modelCNN(DataLoader.DataName.action, network="small",labelTarget="action", pictureMode='RGB')
 #cnn = modelCNN(DataLoader.DataName.dance, labelTarget="subject", network="personal",pictureMode='RGB')  #ok
-cnn = modelCNN(DataLoader.DataName.emotional, labelTarget="action", network="densenet", pictureMode='RGB')
+#cnn = modelCNN(DataLoader.DataName.emotional, labelTarget="subject", network="densenet", pictureMode='RGB')
 #cnn = modelCNN(DataLoader.DataName.action, network="model3",labelTarget="action", pictureMode='RGB')
