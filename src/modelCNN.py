@@ -410,7 +410,15 @@ def plot_confusion_matrix(cm, classes,dataName,normalize=False,title='Confusion 
                      
     #en cours en ligne de commande : cnn = modelCNN(DataLoader.DataName.emotional, labelTarget="subject", network="densenet", pictureMode='RGB')
 ## ---------- TEST -------------
-cnn = modelCNN(DataLoader.DataName.action, network="small",labelTarget="action", pictureMode='RGB')
+#cnn = modelCNN(DataLoader.DataName.action, network="small",labelTarget="action", pictureMode='RGB')
 #cnn = modelCNN(DataLoader.DataName.dance, labelTarget="subject", network="personal",pictureMode='RGB')  #ok
-#cnn = modelCNN(DataLoader.DataName.emotional, labelTarget="subject", network="densenet", pictureMode='RGB')
+cnn = modelCNN(DataLoader.DataName.emotional, labelTarget="subject", network="densenet", pictureMode='RGB')
 #cnn = modelCNN(DataLoader.DataName.action, network="model3",labelTarget="action", pictureMode='RGB')
+
+
+# =============================================================================
+#         self.Depth= 43           # Depth: int -- how many layers; "Depth must be 3*N + 4"
+#         self.nb_dense_block = 4   # nb_dense_block: int -- number of dense blocks to add to end
+#         self.growth_rate =12     # growth_rate: int -- number of filters to add
+#         self.nb_filter = 40      # nb_filter: int -- number of filters
+# =============================================================================
