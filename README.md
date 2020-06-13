@@ -5,7 +5,9 @@ Ce projet vise à classifier des actions humaines tels que (danser, saluer, leve
 
 Les données utilisées sont de sources diverses et représentent des succéssions de positions de chaque joint du squelette d'un sujet. Chaque joint est repésenter par des coordonnées cartésiennes (x, y, z) en 3D.
 
-On s'est appuyé sur un premier algorithme plus ou moins naïf du type KNN(K plus proches voisins) pour ensuite nous diriger vers des algorithmes de deepl learning tels que les modèles LSTM et CNN.
+On s'est appuyé sur un premier algorithme plus ou moins naïf du type KNN(K plus proches voisins) pour ensuite nous diriger vers des algorithmes de deep learning tels que les modèles LSTM et CNN.
  
-![wallpapper](./doc/wallpaper.png)
+Bibliothèques : Tensorflow, Keras
+ 
+![wallpapper](./doc/images/image3.gif)
 
