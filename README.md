@@ -8,7 +8,9 @@ Les données utilisées sont de sources diverses et représentent des succéssio
 On s'est appuyé sur un premier algorithme plus ou moins naïf du type KNN(K plus proches voisins) pour ensuite nous diriger vers des algorithmes de deep learning tels que les modèles LSTM et CNN.
  
 Bibliothèques : Tensorflow, Keras
+
 Langage : Python
+
 Durée du projet : 6 mois
  
 ![wallpapper](./doc/images/image3.gif)
