@@ -7,7 +7,7 @@ Les données utilisées sont de sources diverses et représentent des succéssio
 
 On s'est appuyé sur un premier algorithme plus ou moins naïf du type KNN(K plus proches voisins) pour ensuite nous diriger vers des algorithmes de deep learning tels que les modèles LSTM et CNN.
  
-Bibliothèques : Tensorflow, Keras
+Bibliothèques : Tensorflow, Keras, OpenCV
 
 Langage : Python
 
